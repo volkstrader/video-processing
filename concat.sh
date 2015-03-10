@@ -5,6 +5,10 @@ do
 	cmd='cd "$DIR/${d%%/}"'
 	eval $cmd
 	pwd
+	if [ -e "${d%%/}.mp4" ]
+	then
+		continue
+	fi
 	
 	for f in $(ls -rt *.dat)
 	do
